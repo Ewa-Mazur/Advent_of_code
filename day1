@@ -15,5 +15,9 @@ with open ('elf_calories.txt', 'r', encoding='UTF-8') as file:
         elif item == "":
             sum_calories.append(counter)
             counter = 0
-
+      
+    #aswer to 1st part of task - max q'ty of calories
+    print(max(sum_calories))
+    
+    #aswer to 2nd part of task - top three Elves carrying the most Calories
     print(sum(sorted(sum_calories)[-3:]))
