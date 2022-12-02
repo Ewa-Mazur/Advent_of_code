@@ -1,0 +1,19 @@
+"""
+Description of day1 task: https://adventofcode.com/2022/day/1
+Python
+"""
+
+with open ('elf_calories.txt', 'r', encoding='UTF-8') as file:
+    calories_list = file.read()
+    counter = 0
+    sum_calories = []
+
+
+    for item in calories_list.splitlines():
+        if item != "":
+            counter += int(item)
+        elif item == "":
+            sum_calories.append(counter)
+            counter = 0
+
+    print(sum(sorted(sum_calories)[-3:]))
